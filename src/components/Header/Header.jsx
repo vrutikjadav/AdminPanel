@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faBell } from "@fortawesome/free-solid-svg-icons";
 import "./Header.css";
@@ -6,7 +6,6 @@ import ProfileImg from "../../assets/images/Image.png";
 
 const Header = () => {
   return (
-    <div className="header">
       <div className="headerComponent">
         {/* Search Bar */}
         <div className="searchBar">
@@ -23,27 +22,24 @@ const Header = () => {
             />
           </div>
         </div>
-        <div>
-          {/* Notification Icon  */}
-          <div className="ProfileSection">
-            <div>
-              <FontAwesomeIcon icon={faBell} className="BellIcon" />
+        {/* Notification Icon  */}
+        <div className="ProfileSection">
+          <div>
+            <FontAwesomeIcon icon={faBell} className="BellIcon" />
+          </div>
+          {/* Profile detials */}
+          <div className="profileDetails">
+            <div className="profileDescription">
+              <span className="StoreName">Puma Offical Store</span>
+              <span className="changeSeller">change seller</span>
             </div>
-            {/* Profile detials */}
-            <div className="profileDetails">
-              <div className="profileDescription">
-                <span className="StoreName">Puma Offical Store</span>
-                <span className="changeSeller">change seller</span>
-              </div>
-            </div>
-            {/* Profile Image */}
-            <div>
-              <img src={ProfileImg} className="ProfileImg" />
-            </div>
+          </div>
+          {/* Profile Image */}
+          <div>
+            <img src={ProfileImg} className="ProfileImg" />
           </div>
         </div>
       </div>
-    </div>
   );
 };
 

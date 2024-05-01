@@ -1,20 +1,15 @@
 
-.header{
-    background-color: beige;
-    display: flex;
-    align-items: center;
-    box-shadow: 4px 2px 10px;
-    border-radius: 0.5rem;
-}
 
 .headerComponent{
     width: 100%;
     padding: 0.75rem;
     display: flex;
     align-items: center;
+    box-shadow: 4px 2px 10px;
+    border-radius: 0.5rem;
     justify-content: space-between;
+    background-color: beige;
 }
-
 .searchBar{
     width: 60%;
 }
@@ -55,8 +50,33 @@
 .ProfileSection{
     width: 100%;
     display: flex;
+    justify-content: flex-end;
 }
 
 .ProfileSection > div{
     margin-right: 1rem;
+}
+
+@media (orientation: portrait){
+    .headerComponent{
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+    }
+    .headerComponent > div{
+        padding-top: 0.25rem;
+    }
+    .searchBar{
+        width: 100%;
+    }
+    .ProfileSection{
+        justify-content: space-between;
+    }   
+
+    .ProfileSection > div{
+        margin: 0 1rem 0 1rem;
+    }
+
+    .profileDescription{
+        align-items: center;
+    }
 }
